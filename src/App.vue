@@ -41,7 +41,7 @@ import axios from "axios"
 import HeaderNav from './components/template/HeaderNav.vue';
 import FooterApp from './components/template/FooterApp.vue';
 
-import MoviesList from './components/utils/MoviesList';
+import MoviesList from './components/utils/MoviesList.vue';
 
 export default { // export du composant avec ses options
 

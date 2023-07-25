@@ -5,6 +5,7 @@
 
             <!-- .title = rechercher dans la console (clic droit sur le site Cinéflix -> inspecter -> console)-->
             <h5 class="card-title">{{ movie.title }}</h5>
+            <p>date de sortie: {{ movie.release_date }}</p>
             <p class="card-text"> {{ movie.overview.substring(0, 200) + "..." }}</p>
             <p>note moyenne : {{ movie.vote_average }}</p>
             <p>{{ movie.vote_count }}</p>
