@@ -4,9 +4,9 @@
     <!-- v-bind permet d'injecter une variable en tant que valeur d'un attribut -->
     <div class="container-fluid">
         <div class="row">
-            <div v-for="movieAlias in movies" v-bind:key="movieAlias.id" class="col-sm6 col-md-4 col-lg-3">
+            <div v-for="(movieAlias,index) in movies" v-bind:key="movieAlias.id" class="col-sm6 col-md-4 col-lg-3">
                 <!--pas de padding/margin sur la col mais à mettre sur la card-->
-
+                {{ index + 1 }} <!--{{ movieAlias.title }} (Note: {{ movieAlias.vote_average }})-->
                 <!-- MovieCard affiche chaque film grâce à une boucle v-for -->
                 <!-- v-bind: movie => props : ['movie'] de MovieCard.vue  et "movieAlias" = valeur (mon alias du v-for)-->
                 <MovieCard v-bind:movie="movieAlias" />
