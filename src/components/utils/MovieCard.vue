@@ -1,4 +1,10 @@
 <template>
+
+<!--pour faire apparaitre le n° index "que" sur la page Top50Movies.vue-->
+<h3 v-if="$route.path == '/Top50Movies'" class="pb-3 text-danger card-title">
+    <span v-once> #{{ index + 1 }}</span> <!-- pour faire apparaitre les chiffres à partir de 1 (et non de 0)--> 
+</h3>
+
     <div class="card m-2">
         <img v-bind:src="source + movie.poster_path" alt="poster de film">
         <div class="card-body">
@@ -28,6 +34,7 @@ export default {
         }
     },
 
-    props : ['movie']
+    props : ['movie', 'index']
+
 }
 </script>
