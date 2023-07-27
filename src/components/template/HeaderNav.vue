@@ -46,7 +46,7 @@
 
     </nav>
 
-    <h1 class="text-center m-5">Cinéflix</h1>
+    <h1 class="text-center text-white m-5">Cinéflix</h1>
 </template>
 
 <script>

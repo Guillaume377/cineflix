@@ -77,6 +77,8 @@ export default { // export du composant avec ses options
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 #app {
   background-image: url(./assets/fond_r_n.jpg);
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -85,7 +87,13 @@ export default { // export du composant avec ses options
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
 }
+
+h1 {
+  font-family: 'Special Elite', cursive !important;
+}
+
 </style>
 
 <!-- style scoped si application du style uniquement sur la page concernée-->

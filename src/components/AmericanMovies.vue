@@ -1,7 +1,7 @@
 <template>
 
             <!-- j'affiche le titre de la page et sa sélection de films (films américains)-->
-            <h1 class="pt-5 font-weight-light">
+            <h1 class="pt-5 m-5 text-danger font-weight-light">
                 Vos films américains sont sur Cinéflix !
             </h1>
 
