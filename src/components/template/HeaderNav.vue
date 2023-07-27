@@ -3,34 +3,34 @@
         <div class="container-fluid">
 
             <li class="nav-item mb-4">
-                <router-link to="/" class="link text-center nav-link text-white mx-5">Accueil</router-link>
+                <router-link to="/" class="link text-center nav-link text-danger mx-5">CINEFLIX</router-link>
             </li>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                     <li class="nav-item">
-                        <router-link to="/AmericanMovies" class="link text-center nav-link text-white mx-5">Films
+                        <router-link to="/AmericanMovies" class="link text-center nav-link text-danger mx-5">Films
                             américains</router-link>
                     </li>
 
                     <li class="nav-item">
-                        <router-link to="/FrenchMovies" class="link text-center nav-link text-white mx-5">Films
+                        <router-link to="/FrenchMovies" class="link text-center nav-link text-danger mx-5">Films
                             français</router-link>
                     </li>
 
                     <li class="nav-item">
-                        <router-link to="/LastMovies" class="link text-center nav-link text-white mx-5">Films
+                        <router-link to="/LastMovies" class="link text-center nav-link text-danger mx-5">Films
                             récents</router-link>
                     </li>
 
                     <li class="nav-item">
-                        <router-link to="/Top50Movies" class="link text-center nav-link text-white mx-5">Top
+                        <router-link to="/Top50Movies" class="link text-center nav-link text-danger mx-5">Top
                             50</router-link>
                     </li>
 
                     <li class="nav-item">
-                        <router-link to="/SearchMovies" class="link text-center nav-link text-white mx-5">Recherche de
+                        <router-link to="/SearchMovies" class="link text-center nav-link text-danger mx-5">Recherche de
                             films</router-link>
                     </li>
 

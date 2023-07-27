@@ -6,7 +6,7 @@
     <div v-if="$route.path == '/'">
 
       <!-- j'affiche le titre de l'accueil et sa sélection de films (les + populaires)-->
-      <h1 class="pt-5 font-weight-light">
+      <h1 class="pt-5 font-weight-light text-danger">
         Vos films préférés sont sur Cinéflix !
       </h1>
 
