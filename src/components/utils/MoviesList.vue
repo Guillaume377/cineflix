@@ -3,6 +3,7 @@
     <!-- v-bind:key="movie.id" : identifiant de chaque film -->
     <!-- v-bind permet d'injecter une variable en tant que valeur d'un attribut -->
     <div class="container-fluid">
+
         <div class="row">
             <div v-for="(movieAlias,index) in movies" v-bind:key="movieAlias.id" class="col-sm6 col-md-4 col-lg-3"> <!--pas de padding/margin sur la col mais à mettre sur la card-->
               

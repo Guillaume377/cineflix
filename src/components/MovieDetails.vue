@@ -26,10 +26,14 @@
                     <span v-for="genre in movie.genres" :key="genre.id" class="badge bg-secondary">{{ genre.name }}</span>
                 </p>
 
-                <p><span class="fw-bold">Langue originale:</span> {{ movie.original_language }}</p>
+                <p><span class="fw-bold">Langue originale:</span>
+                    <span v-if="movie.original_language == 'fr'"> français </span>
+                    <span v-else-if="movie.original_language == 'en'"> anglais </span>
+                    <span v-else>{{ movie.original_language }}</span>
+                </p>
                 <p><span class="fw-bold">Budget :</span> {{ movie.budget }} $</p>
                 <p class="card-text"><span class="fw-bold">Résumé :</span> {{ movie.overview }}</p>
-                <p><span class="fw-bold">Note moyenne :</span> {{ movie.vote_average }}</p>
+                <p><span class="fw-bold">Note moyenne :</span> {{ Math.round(movie.vote_average * 10) / 10 }}</p>
                 <p><span class="fw-bold">Nombre de votes :</span> {{ movie.vote_count }}</p>
                 <p><span class="fw-bold">Site officiel :</span> {{ movie.homepage }}</p>
 
@@ -72,9 +76,6 @@ export default { // export du composant avec ses options
             source: "https://image.tmdb.org/t/p/original/",
             video: [],
         };
-
-
-
 
     },
 

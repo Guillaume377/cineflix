@@ -6,7 +6,7 @@
     <div v-if="$route.path == '/'">
 
       <!-- j'affiche le titre de l'accueil et sa sélection de films (les + populaires)-->
-      <h1 class="pt-5 font-weight-light text-danger">
+      <h1 class="pt-5 m-5 font-weight-light text-danger ">
         Vos films préférés sont sur Cinéflix !
       </h1>
 
@@ -78,6 +78,7 @@ export default { // export du composant avec ses options
 
 <style>
 #app {
+  background-image: url(./assets/fond_r_n.jpg);
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -87,4 +88,4 @@ export default { // export du composant avec ses options
 }
 </style>
 
-
+<!-- style scoped si application du style uniquement sur la page concernée-->
