@@ -1,8 +1,8 @@
 <template>
 
             <!-- j'affiche le titre de la page et sa sélection de films (films américains)-->
-            <h1 class="pt-5 font-weight-light">
-                Vos films français sont sur Cinéflix !
+            <h1 class="pt-5 m-5 text-light font-weight-light">
+                Vos films français sont sur <span class = "text-danger">Cinéflix</span> !
             </h1>
 
                 <!-- v-bind : prop attendue = variable des dates (liste de films)-->

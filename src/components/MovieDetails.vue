@@ -1,7 +1,7 @@
 <template>
-    <h1 class="text-danger m-5">Détails du film</h1>
+    <h1 class="text-light m-5">Détails du film</h1>
 
-    <div class="container-fluid border border-danger">
+    <div class="container-fluid border border-light">
 
         <div class="row m-5">
 
@@ -18,7 +18,7 @@
                 </div>
 
 
-                <h5 class="card-title m-5 fw-bolder">{{ movie.title }}</h5>
+                <h5 class="card-title text-light m-5 fw-bolder">{{ movie.title }}</h5>
                 <p><span class="fw-bold">Date de sortie:</span> {{ formatDate(movie.release_date) }}</p>
                 <p><span class="fw-bold">Titre original :</span> {{ movie.original_title }}</p>
 
@@ -109,3 +109,10 @@ export default { // export du composant avec ses options
 
 }
 </script>
+
+<style scoped>
+
+p {
+    color: white;
+}
+</style>

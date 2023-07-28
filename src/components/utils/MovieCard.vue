@@ -1,6 +1,6 @@
 <template>
     <!--pour faire apparaitre le n° index "que" sur la page Top50Movies.vue-->
-    <h3 v-if="$route.path == '/Top50Movies'" class="pb-3 text-danger card-title">
+    <h3 v-if="$route.path == '/Top50Movies'" class="pb-3 text-light card-title">
         <span v-once> #{{ index + 1 }}</span> <!-- pour faire apparaitre les chiffres à partir de 1 (et non de 0)-->
     </h3>
 

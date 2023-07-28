@@ -6,8 +6,8 @@
     <div v-if="$route.path == '/'">
 
       <!-- j'affiche le titre de l'accueil et sa sélection de films (les + populaires)-->
-      <h1 class="pt-5 m-5 font-weight-light text-danger ">
-        Vos films préférés sont sur Cinéflix !
+      <h1 class="pt-5 m-5 font-weight-light text-light ">
+        Vos films préférés sont sur <span class = "text-danger">Cinéflix</span> !
       </h1>
 
       <!-- en cas d'erreur de l'appel API-->
@@ -80,7 +80,7 @@ export default { // export du composant avec ses options
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 #app {
-  background-image: url(./assets/fond_r_n.jpg);
+  
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -92,6 +92,10 @@ export default { // export du composant avec ses options
 
 h1 {
   font-family: 'Special Elite', cursive !important;
+}
+
+body {
+ background-image: url(./assets/fond_r_n.jpg);
 }
 
 </style>

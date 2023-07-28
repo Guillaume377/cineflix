@@ -1,9 +1,9 @@
 <template>
-    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top border-bottom border-bottom-danger" data-bs-theme="dark">
+        <div class="container-fluid cineflix-header">
 
             <li class="nav-item mb-4">
-                <router-link to="/" class="link text-center nav-link text-danger mx-5">CINEFLIX</router-link>
+                <router-link to="/" class="  link text-center nav-link text-danger fs-5 fw-bold mx-5">Cinéflix</router-link>
             </li>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -46,7 +46,6 @@
 
     </nav>
 
-    <h1 class="text-center text-white m-5">Cinéflix</h1>
 </template>
 
 <script>
@@ -54,4 +53,14 @@ export default {
     name: "HeaderNav"
 }
 </script>
+
+<style scoped>
+
+.cineflix-header {
+    font-family: 'Special Elite', cursive !important;
+
+}
+
+
+</style>
 

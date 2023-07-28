@@ -1,5 +1,5 @@
 <template>
-    <h1 class="text-center m-5">Recherche de films</h1>
+    <h1 class="text-light text-center m-5">Recherche de films sur <span class = "text-danger">Cinéflix</span></h1>
 
     <div>
         <input type="text" v-model="query" @keyup="searchMovies" placeholder="Rechercher..." />
@@ -54,3 +54,12 @@ export default {
 
 }
 </script>
+
+<style scoped>
+
+h1 {
+    margin-top: 10% !important;
+    margin-bottom : 5% !important;
+}
+
+</style>
