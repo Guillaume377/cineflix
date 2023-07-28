@@ -5,6 +5,7 @@
                 Vos films français sont sur <span class = "text-danger">Cinéflix</span> !
             </h1>
 
+                <SortButtons :movies="frenchMovies"></SortButtons>
                 <!-- v-bind : prop attendue = variable des dates (liste de films)-->
                 <MoviesList v-bind:movies="frenchMovies" />
 
@@ -15,13 +16,14 @@
 import axios from "axios"
 
 import MoviesList from './utils/MoviesList.vue';
+import SortButtons from "./utils/SortButtons.vue";
 
 export default {
 
     name: "FrenchMovies",
 
     components: {
-        MoviesList,
+        MoviesList, SortButtons,
     },
 
     data() { // les variables disponibles dans mon composant
@@ -35,7 +37,7 @@ export default {
         //code déclenché avant la génération du template par vue
         //c'est ici que je vais lancer mon appel API
         // adresse de l'API     / version / mot-clé / clé API                                / options : français + popularité description. + page 1
-        axios.get("https://api.themoviedb.org/3/discover/movie/?api_key=a5087ee297fbc59075d15615744b267d&with_original_language=fr&include_adult=false&vote_count.gte=1000&page=1")
+        axios.get("https://api.themoviedb.org/3/discover/movie/?api_key=a5087ee297fbc59075d15615744b267d&with_original_language=fr&language=fr&include_adult=false&vote_count.gte=1000&page=1")
             // .then => cas où l'appel API a réussi et renvoie un résultat
             // .then => prend en paramètre une fonction fléchée anonyme. res= réponse de l'API
             .then(res => {

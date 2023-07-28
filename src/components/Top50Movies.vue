@@ -4,8 +4,10 @@
         Votre Top 50 sur <span class = "text-danger">Cinéflix </span>!
     </h1>
 
+    <SortButtons :movies="top50Movies"></SortButtons>
     <!-- v-bind : prop attendue = variable des dates (liste de films)-->
     <MoviesList v-bind:movies="top50Movies" />
+
 </template>
 
 <script>
@@ -13,13 +15,14 @@
 import axios from "axios"
 
 import MoviesList from './utils/MoviesList.vue';
+import SortButtons from "./utils/SortButtons.vue";
 
 export default { // export du composant avec ses options
 
     name: "Top50Movies",
 
     components: {
-        MoviesList,
+        MoviesList, SortButtons
     },
 
     data() { // les variables disponibles dans mon composant

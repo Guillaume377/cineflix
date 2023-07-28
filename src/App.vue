@@ -7,9 +7,10 @@
 
       <!-- j'affiche le titre de l'accueil et sa sélection de films (les + populaires)-->
       <h1 class="pt-5 m-5 font-weight-light text-light ">
-        Vos films préférés sont sur <span class = "text-danger">Cinéflix</span> !
+        Vos films préférés sont sur <span class="text-danger">Cinéflix</span> !
       </h1>
 
+    
       <!-- en cas d'erreur de l'appel API-->
       <div v-if="error">
         <p class="bg-danger text-white p-3 fs-5">Une erreur est survenue. Merci de recharger la page ou de réessayer plus
@@ -18,9 +19,11 @@
 
       <!-- si appel API ok-->
       <div v-else>
+        <SortButtons :movies="popularMovies"></SortButtons>
         <!-- MoviesList affiche les films grâce à une boucle v-for -->
         <!-- v-bind : prop attendue = variable des dates (liste de films)-->
         <MoviesList v-bind:movies="popularMovies" />
+
       </div>
     </div>
 
@@ -29,6 +32,9 @@
       <!-- j'affiche le template du composant concerné par la route (ex : FrenchMovies)-->
       <router-view :key="$route.fullPath"></router-view>
     </div>
+
+
+
 
     <FooterApp />
   </div>
@@ -42,19 +48,22 @@ import HeaderNav from './components/template/HeaderNav.vue';
 import FooterApp from './components/template/FooterApp.vue';
 
 import MoviesList from './components/utils/MoviesList.vue';
+import SortButtons from './components/utils/SortButtons.vue';
 
 export default { // export du composant avec ses options
 
   name: 'App',
 
   components: {
-    HeaderNav, FooterApp, MoviesList,
+    HeaderNav, FooterApp, MoviesList, SortButtons,
   },
 
   data() { // les variables disponibles dans mon composant
     return { // la variable movies va contenir les films récupérés par l'appel API
       popularMovies: [],
-      error: false // error : en cas d'erreur d'appel de l'API
+      error: false, // error : en cas d'erreur d'appel de l'API
+
+      
     }
   },
 
@@ -80,7 +89,7 @@ export default { // export du composant avec ses options
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 #app {
-  
+
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -90,13 +99,14 @@ export default { // export du composant avec ses options
 
 }
 
+body {
+  background-image: url(./assets/fond_r_n.jpg);
+}
+
 h1 {
   font-family: 'Special Elite', cursive !important;
 }
 
-body {
- background-image: url(./assets/fond_r_n.jpg);
-}
 
 </style>
 

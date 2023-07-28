@@ -112,6 +112,10 @@ export default { // export du composant avec ses options
 
 <style scoped>
 
+h1 {
+    margin-top: 10% !important;
+}
+
 p {
     color: white;
 }

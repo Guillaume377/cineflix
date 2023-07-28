@@ -3,6 +3,7 @@
 
     <div>
         <input type="text" v-model="query" @keyup="searchMovies" placeholder="Rechercher..." />
+        <SortButtons :movies="movies"></SortButtons>
         <MoviesList :movies="movies"></MoviesList>
     </div>
 </template>
@@ -11,11 +12,11 @@
 
 import axios from "axios";
 import MoviesList from './utils/MoviesList.vue';
-
+import SortButtons from "./utils/SortButtons.vue";
 export default {
 
     components: {
-        MoviesList,
+        MoviesList, SortButtons,
     },
 
     name: "SearchMovies",

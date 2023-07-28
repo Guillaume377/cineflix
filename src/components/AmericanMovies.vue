@@ -1,12 +1,13 @@
 <template>
+    <!-- j'affiche le titre de la page et sa sélection de films (films américains)-->
+    <h1 class="pt-5 m-5 text-light font-weight-light">
+        Vos films américains sont sur <span class="text-danger">Cinéflix</span> !
+    </h1>
 
-            <!-- j'affiche le titre de la page et sa sélection de films (films américains)-->
-            <h1 class="pt-5 m-5 text-light font-weight-light">
-                Vos films américains sont sur <span class = "text-danger">Cinéflix</span> !
-            </h1>
 
-                <!-- v-bind : prop attendue = variable des dates (liste de films)-->
-                <MoviesList v-bind:movies="americanMovies" />
+    <SortButtons :movies="americanMovies"></SortButtons>
+    <!-- v-bind : prop attendue = variable des dates (liste de films)-->
+    <MoviesList v-bind:movies="americanMovies" />
 
 </template>
 
@@ -15,13 +16,14 @@
 import axios from "axios"
 
 import MoviesList from './utils/MoviesList.vue';
+import SortButtons from "./utils/SortButtons.vue";
 
 export default { // export du composant avec ses options
 
     name: "AmericanMovies",
 
     components: {
-        MoviesList,
+        MoviesList, SortButtons,
     },
 
     data() { // les variables disponibles dans mon composant
@@ -51,11 +53,11 @@ export default { // export du composant avec ses options
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
 }
 </style>

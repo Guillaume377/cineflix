@@ -1,11 +1,14 @@
 <template>
     <!-- j'affiche le titre de la page et sa sélection de films (films américains)-->
     <h1 class="pt-5 m-5 text-light font-weight-light">
-        Vos films récents sont sur <span class = "text-danger">Cinéflix</span> !
+        Vos films récents sont sur <span class="text-danger">Cinéflix</span> !
     </h1>
 
+    <SortButtons :movies="lastMovies"></SortButtons>
     <!-- v-bind : prop attendue = variable des dates (liste de films)-->
     <MoviesList v-bind:movies="lastMovies" />
+    
+
 </template>
 
 <script>
@@ -13,13 +16,14 @@
 import axios from "axios"
 
 import MoviesList from './utils/MoviesList.vue';
+import SortButtons from "./utils/SortButtons.vue";
 
 export default { // export du composant avec ses options
 
     name: "LastMovies",
 
     components: {
-        MoviesList,
+        MoviesList, SortButtons,
     },
 
     data() { // les variables disponibles dans mon composant

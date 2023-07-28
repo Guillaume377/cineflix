@@ -48,6 +48,7 @@ export default {
         }
     },
 
+    // liste de films à afficher, fournie par le parent
     props: ['movie', 'index']
 
 }
