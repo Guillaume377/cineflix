@@ -36,7 +36,7 @@ export default { // export du composant avec ses options
     created() {
         //code déclenché avant la génération du template par vue
         //c'est ici que je vais lancer mon appel API
-        // adresse de l'API     / version / mot-clé / clé API                                / options : français + pays d'origine : US. + sortie + récent au + ancien
+        // adresse de l'API     / version / mot-clé / clé API                                / options : français + pays d'origine : US. + sortie et du + récent au + ancien
         axios.get("https://api.themoviedb.org/3/discover/movie/?api_key=a5087ee297fbc59075d15615744b267d&language=fr&certification_country=us&vote_count.gte=1000&sort_by=primary_release_date.desc&page=1")
             // .then => cas où l'appel API a réussi et renvoie un résultat
             // .then => prend en paramètre une fonction fléchée anonyme. res= réponse de l'API

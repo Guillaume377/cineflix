@@ -5,11 +5,11 @@
 
         <div class="row m-5">
 
-            <div class="col-md-6">
+            <div class="col-xl-6">
                 <img class="w-75" v-bind:src="source + movie.poster_path" alt="poster de film">
             </div>
 
-            <div class="col-md-6">
+            <div class="col-xl-6">
                 <div class="mt-5" id="trailer" v-if="video[0]">
                     <iframe width="650" height="300" v-bind:src="'https://www.youtube.com/embed/' + video[0].key"
                         frameborder="0"

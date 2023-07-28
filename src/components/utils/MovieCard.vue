@@ -15,7 +15,7 @@
                 <h5 class="card-title"><span class="fw-bold">{{ movie.title }}</span></h5>
                 <p><span class="fw-bold">Date de sortie: </span>{{ formatDate(movie.release_date) }}</p>
                 <p class="card-text"> {{ movie.overview.substring(0, 200) + "..." }}</p>
-                <p><span class="fw-bold">Note moyenne : </span>{{ movie.vote_average }}</p>
+                <p><span class="fw-bold">Note moyenne : </span>{{ Math.round(movie.vote_average * 10) / 10 }}</p>
                 <p><span class="fw-bold">Nombre de votes : </span>{{ movie.vote_count }}</p>
 
             </div>
