@@ -11,7 +11,7 @@ export default {
 <style scoped>
 
 h1 {
-    margin-top: 20% !important;
+    margin-top: 10% !important;
 }
 
 </style>
